@@ -22,7 +22,7 @@ function displayAllBooks() {}
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-btn");
-const closeButton = document.querySelector("dialog button");
+const closeButton = document.querySelector(".dialog-close-btn");
 
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
@@ -32,4 +32,9 @@ showButton.addEventListener("click", () => {
 // "Close" button closes the dialog
 closeButton.addEventListener("click", () => {
   dialog.close();
+});
+
+const submitFormBtn = document.querySelector(".form-btn");
+submitFormBtn.addEventListener("click", (event) => {
+  
 });
