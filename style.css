@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    height: 15%;
+    flex: auto;
+    background-color: wheat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 85%;
+    flex: auto;
+    background-color: black;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.main-topbar {
+    display: flex;
+    width: 100%;
+}
+
+.add-btn {
+    margin-left: auto;
+}
+
+.book-table {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+}
+
+.book-table th {
+    text-align: left;
+}
+
+/* table, th, td {
+    border: 1px solid yellow;
+    border-collapse: collapse;
+} */
+
+.book-unit {
+    height: 100px;
+}
