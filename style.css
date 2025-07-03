@@ -1,31 +1,60 @@
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jetbrains-mono-proj {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: inherit;
+  background-color: inherit;
+  color: white;
+}
+
+button {
+  box-shadow: none;
+  border: 0.5px solid white;
+  padding: 0.4em;
+}
+
+button:hover {
+  color: black;
+  background-color: darkgray;
+  border: 0.5px solid black;
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: black;
 }
 
 header {
+  font-family: "Press Start 2P";
   height: 15%;
   flex: auto;
-  background-color: wheat;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
 
 main {
+  font-family: "JetBrains Mono";
   height: 85%;
   flex: auto;
-  background-color: black;
 
-  color: white;
   display: flex;
   flex-direction: column;
   padding-left: 25%;

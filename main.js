@@ -18,23 +18,52 @@ function addBookToLibrary(name, author, numPages, read) {
   myLibrary.push(newBook);
 }
 
-function displayAllBooks() {}
+function displayAllBooks() {
+  for (let book in myLibrary) {
+    const bookTable = document.querySelector(".book-table");
+    let newRow = document.createElement("tr");
+
+    let nameRow = document.createElement("td");
+    nameRow.textContent = book.name;
+    nameRow.className = "book-name";
+
+    let authorRow = document.createElement("td");
+    authorRow.textContent = book.name;
+    authorRow.className = "author-name";
+
+    let numPagesRow = document.createElement("td");
+    numPagesRow.textContent = book.name;
+    numPagesRow.className = "num-pages";
+
+    let readCheckRow = document.createElement("td");
+    readCheckRow.className = "read-check";
+    
+  }
+}
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-btn");
 const closeButton = document.querySelector(".dialog-close-btn");
 
-// "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
 
-// "Close" button closes the dialog
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
 const submitFormBtn = document.querySelector(".form-btn");
+const bookName = document.querySelector('[name="bookName"]');
+const authorName = document.querySelector('[name="authorName"]');
+const numPages = document.querySelector('[name="numPages"]');
+const readCheck = document.querySelector('[name="read"]');
+
 submitFormBtn.addEventListener("click", (event) => {
-  
+  addBookToLibrary(
+    bookName.value,
+    authorName.value,
+    numPages.value,
+    readCheck.value
+  );
 });
